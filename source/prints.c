@@ -5,15 +5,15 @@
  * Author     : Joshua Fain
  * Copyright (c) 2020 - 2023
  * 
- * PRINST.C - Implements PRINTS.H. These functions can be used to print 
- * unsigned integers (decimal, binary, hex) and strings. 
+ * Description: Implements PRINTS.H. These functions can be used to print 
+ *              unsigned integers (decimal, binary, hex) and strings. 
  * 
- * NOTE: Each of the print functions calls the static transmit function 
+ * NOTE 
+ * Each of the print functions calls the static transmit function 
  * defined here. This function will pass each character arg (one at a time) to
  * an appropriate I/O transmit function (e.g. USART). This I/O transmit 
  * function must be defined by the user elsewhere and included here. It will 
  * only need to be called here from within the static transmit function.
- *
  */
 
 #include <stdint.h>

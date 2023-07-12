@@ -5,8 +5,8 @@
  * Author     : Joshua Fain
  * Copyright (c) 2020 - 2023
  * 
- * PRINTS.H - interface for some print functions. Used to print unsigned 
- * integers (decimal, binary, hex) and strings.
+ * Description: Interface for some print functions. Used to print unsigned 
+ *              integers (decimal, binary, hex) and strings.
  */
 
 #ifndef PRINTS_H
