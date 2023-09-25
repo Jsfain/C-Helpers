@@ -6,18 +6,20 @@
  * Copyright (c) 2020 - 2023
  * 
  * Description: Implements PRINTS.H. These functions can be used to print 
- *              unsigned integers (decimal, binary, hex) and strings. 
+ *              unsigned integers (decimal, binary, hex) and C-strings. 
  * 
- * NOTE 
- * Each of the print functions calls the static transmit function 
- * defined here. This function will pass each character arg (one at a time) to
- * an appropriate I/O transmit function (e.g. USART). This I/O transmit 
- * function must be defined by the user elsewhere and included here. It will 
- * only need to be called here from within the static transmit function.
+ * NOTE on TRANSMIT FUNCTION:
+ * Each print function operates by sending a single character at a time to the
+ * static transmit function in this file. From within this function, the user 
+ * will need to specify an appropriate I/O transmit (e.g. USART transmit) 
+ * function to be called that will perform the action of printing the single 
+ * char argument to the output device (e.g. terminal). Ensure this function
+ * has been included as well.
  */
 
 #include <stdint.h>
 #include "prints.h"
+//INCLUDE file to implment I/O transmit function 
 
 /*
  ******************************************************************************
@@ -28,7 +30,7 @@
 // SEE NOTE AT TOP
 static void transmit(char val)
 {
-  // placeholder for io_Transmit(val)
+  // pass val to I/O transmit function. Must be specified by user.
 }
 
 /*
